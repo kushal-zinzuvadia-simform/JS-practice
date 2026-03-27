@@ -7,14 +7,14 @@ let cipher = (input, shift) => {
         .map((c) => {
             let code = c.charCodeAt();
             if (code >= 65 && code <= 90) {
-                let result = "A".charCodeAt() - 1;
+                let result = "A".charCodeAt();
                 result += (code - 65 + shift) % 26;
                 c = String.fromCharCode(result);
                 return c;
             }
 
             if (code >= 97 && code <= 122) {
-                let result = "a".charCodeAt() - 1;
+                let result = "a".charCodeAt();
                 result += (code - 97 + shift) % 26;
                 c = String.fromCharCode(result);
                 return c;
